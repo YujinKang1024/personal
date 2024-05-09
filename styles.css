@@ -1,0 +1,96 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.board-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 550px;
+    height: 550px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.info-container {
+    display: flex;
+    visibility: hidden;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.info-time, .remaining-image {
+    display: flex;
+}
+
+.info-label {
+    margin-right: 10px;
+}
+
+.info-string {
+    color: red;
+}
+
+.image-box {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    background-size: cover;
+}
+
+.title-image-box {
+    background-image: url("bgs/bg.jpg");
+}
+
+.game-cell {
+    background-image: url("bgs/square-bg.png");
+    background-size: cover;
+}
+
+.img-box {
+    visibility: hidden;
+    height: 133.75px;
+    background-size: cover;
+}
+
+.img-1, .img-9 {
+    background-image: url("imgs/01.jpg");
+}
+
+.img-2, .img-10 {
+    background-image: url("imgs/02.jpg");
+}
+
+.img-3, .img-11 {
+    background-image: url("imgs/03.jpg");
+}
+
+.img-4, .img-12 {
+    background-image: url("imgs/04.jpg");
+}
+
+.img-5, .img-13 {
+    background-image: url("imgs/05.jpg");
+}
+
+.img-6, .img-14 {
+    background-image: url("imgs/06.jpg");
+}
+
+.img-7, .img-15 {
+    background-image: url("imgs/07.jpg");
+}
+
+.img-8, .img-16 {
+    background-image: url("imgs/08.jpg");
+}
