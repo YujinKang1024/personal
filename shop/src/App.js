@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import "./App.css";
+import { Button } from "./Styled/Button.js"
+import NavBar from "./Styled/NavBar.js";
 
-function App() {
+const Main = styled.main`
+  width: 100vw;
+  height: 100vh;
+`
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Main>
+        <NavBar>
+        </NavBar>
+        <Button />
+      </Main>
+    </>
   );
 }
-
-export default App;
