@@ -1,9 +1,15 @@
+import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import "./App.css";
-import { Button } from "./Styled/Button.js"
-import NavBar from "./Styled/NavBar.js";
 
-const Main = styled.main`
+import Main from "./Component/Main.js";
+import Detail from "./Component/Detail.js";
+import NavBar from "./Component/NavBar.js";
+
+import "./App.css";
+
+const Body = styled.body`
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 `
@@ -11,11 +17,13 @@ const Main = styled.main`
 export default function App() {
   return (
     <>
-        <Main>
-        <NavBar>
-        </NavBar>
-        <Button />
-      </Main>
+      <Body>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/detail" element={<Detail />} />
+        </Routes>
+      </Body>
     </>
   );
 }

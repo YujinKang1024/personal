@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = styled.div`
@@ -14,23 +14,22 @@ const Header = styled.div`
     margin-top: 3px;
     margin-right: px;
   }
+`;
 
-  & > p {
-    color: #D0D1D3;
-    font-size: 20px;
-    margin-top: 6px;
-    margin-left: 25px;
-  }
+const StyledLink = styled(Link)`
+  color: #D0D1D3;
+  font-size: 20px;
+  margin-top: 6px;
+  margin-left: 25px;
+  text-decoration-line: none;
 `;
 
 export default function NavBar() {
-  const [items] = useState();
-
   return (
     <Header>
       <h3>VACO SHOP</h3>
-      <p>Home</p>
-      <p>Cart</p>
+      <StyledLink to="/">HOME</StyledLink>
+      <StyledLink to="/detail">CART</StyledLink>
     </Header>
   );
 }
