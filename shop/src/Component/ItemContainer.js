@@ -1,22 +1,19 @@
-import { useState } from "react";
 import styled from "styled-components";
 import ItemCard from "./ItemCard";
-import { productData } from "../productData";
+import { useNavigate } from "react-router-dom";
 
 const ItemWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 85vw;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
-export default function ItemContainer() {
-  const [ shoes ] = useState(productData);
+export default function ItemContainer({ productDataList }) {
+  const navigate = useNavigate();
 
   return (
     <ItemWrapper>
       {
-        shoes.map((item) => {
+        productDataList.map((item) => {
           const {
             id,
             title: productTitle,
@@ -25,7 +22,16 @@ export default function ItemContainer() {
             img: procuctImg,
           } = item;
 
-          return <ItemCard key={id} imgSrc={procuctImg} productTitle={productTitle} productDesc={productDesc} price={productPrice} />;
+          return (
+            <ItemCard
+              key={id}
+              imgSrc={procuctImg}
+              productTitle={productTitle}
+              productDesc={productDesc}
+              price={productPrice}
+              onItemCardClick={() => navigate(`/detail/${id}`)}
+            />
+          );
         })
       }
     </ItemWrapper>

@@ -29,7 +29,7 @@ export default function NavBar() {
     <Header>
       <h3>VACO SHOP</h3>
       <StyledLink to="/">HOME</StyledLink>
-      <StyledLink to="/detail">CART</StyledLink>
+      <StyledLink to="/cart">CART</StyledLink>
     </Header>
   );
 }

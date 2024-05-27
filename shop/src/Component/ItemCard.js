@@ -33,9 +33,9 @@ const ItemBox = styled.div`
   }
 `;
 
-export default function ItemCard({ imgSrc, productTitle, productDesc, price }) {
+export default function ItemCard({ imgSrc, productTitle, productDesc, price, onItemCardClick }) {
   return (
-    <ItemBox>
+    <ItemBox onClick={onItemCardClick}>
       <img src={imgSrc} />
       <h5>{productTitle}</h5>
       <b>{`₩ ${price}`}</b>
